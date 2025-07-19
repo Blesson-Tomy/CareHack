@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bconl0syk6n8g"]
+
+[ext_resource type="Script" path="res://CharacterBody2D1.gd" id="1_3bf0q"]
+[ext_resource type="Texture2D" uid="uid://cs16i52j71geb" path="res://Screenshot_2025-07-19_135204-removebg-preview.png" id="2_libs7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yq52d"]
+atlas = ExtResource("2_libs7")
+region = Rect2(0, 0, 90, 83)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bucv"]
+atlas = ExtResource("2_libs7")
+region = Rect2(90, 0, 90, 83)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7the"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yq52d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bucv")
+}],
+"loop": true,
+"name": &"Sun",
+"speed": 2.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kcwl5"]
+radius = 31.257
+
+[node name="Sun1" type="CharacterBody2D"]
+script = ExtResource("1_3bf0q")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.933333)
+position = Vector2(351, 249)
+sprite_frames = SubResource("SpriteFrames_l7the")
+animation = &"Sun"
+frame_progress = 0.0381837
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(350, 249)
+shape = SubResource("CircleShape2D_kcwl5")
