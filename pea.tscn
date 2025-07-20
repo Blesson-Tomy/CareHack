@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://csmyvwk1foe48"]
+
+[ext_resource type="Texture2D" uid="uid://bxf0fwlvc056" path="res://Screenshot_2025-07-19_225424-removebg-preview.png" id="1_i2r4w"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_jpipw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n4wli"]
+radius = 14.3178
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("3_jpipw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i2r4w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n4wli")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

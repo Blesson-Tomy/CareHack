@@ -30,3 +30,6 @@ func spawn_zombie():
 	if rect_shape is RectangleShape2D:
 			var end_position = ground.global_position + Vector2(rect_shape.extents.x, -100)
 			zombie.position = end_position
+
+
+

@@ -1,138 +1,14 @@
-[gd_scene load_steps=27 format=3 uid="uid://dv1nrlo3hr536"]
+[gd_scene load_steps=8 format=3 uid="uid://dv1nrlo3hr536"]
 
 [ext_resource type="Texture2D" uid="uid://cac26gmjilm8b" path="res://PC Computer - Plants vs Zombies - Day.png" id="1_f7j6e"]
 [ext_resource type="Script" path="res://level.gd" id="1_xwaw4"]
 [ext_resource type="Script" path="res://ColorRectAlignment.gd" id="2_rpqon"]
 [ext_resource type="Texture2D" uid="uid://b04h6ockfidws" path="res://Screenshot 2025-07-19 134612.png" id="3_02p35"]
 [ext_resource type="PackedScene" uid="uid://bconl0syk6n8g" path="res://sun_1.tscn" id="5_ofomy"]
-[ext_resource type="Script" path="res://pea.gd" id="6_1rnbw"]
-[ext_resource type="Texture2D" uid="uid://ekbvtdmp06xn" path="res://Screenshot_2025-07-19_122814-removebg-preview.png" id="6_7l164"]
-[ext_resource type="Texture2D" uid="uid://c7emisvumrkxm" path="res://Screenshot_2025-07-19_121358-removebg-preview.png" id="7_abktp"]
+[ext_resource type="PackedScene" uid="uid://cjsal8g1istu4" path="res://peashooter.tscn" id="6_g07tq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy4py"]
-size = Vector2(1155.6, 20)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ll6jc"]
-radius = 30.0
-height = 86.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bnlp2"]
-atlas = ExtResource("6_7l164")
-region = Rect2(0, 0, 54, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f4h3k"]
-atlas = ExtResource("6_7l164")
-region = Rect2(54, 0, 54, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i43yd"]
-atlas = ExtResource("6_7l164")
-region = Rect2(156, 0, 46, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uql65"]
-atlas = ExtResource("6_7l164")
-region = Rect2(202, 0, 46, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6n7w6"]
-atlas = ExtResource("6_7l164")
-region = Rect2(248, 0, 46, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6sbw"]
-atlas = ExtResource("6_7l164")
-region = Rect2(296, 0, 55, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r5bhe"]
-atlas = ExtResource("6_7l164")
-region = Rect2(351, 0, 55, 59)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_37drf"]
-atlas = ExtResource("7_abktp")
-region = Rect2(0, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wxv67"]
-atlas = ExtResource("7_abktp")
-region = Rect2(58, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_irmlg"]
-atlas = ExtResource("7_abktp")
-region = Rect2(116, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tsb1h"]
-atlas = ExtResource("7_abktp")
-region = Rect2(174, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kyrss"]
-atlas = ExtResource("7_abktp")
-region = Rect2(232, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tt7ev"]
-atlas = ExtResource("7_abktp")
-region = Rect2(290, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_h40ml"]
-atlas = ExtResource("7_abktp")
-region = Rect2(348, 0, 58, 63)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xg6kj"]
-atlas = ExtResource("7_abktp")
-region = Rect2(406, 0, 58, 63)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_y0crk"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bnlp2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f4h3k")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i43yd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uql65")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6n7w6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c6sbw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_r5bhe")
-}],
-"loop": true,
-"name": &"Attack",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_37drf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wxv67")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_irmlg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tsb1h")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kyrss")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tt7ev")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h40ml")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xg6kj")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 5.0
-}]
+size = Vector2(904.425, 20)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_xwaw4")
@@ -149,7 +25,7 @@ stretch_mode = 2
 disable_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground"]
-position = Vector2(825.375, 437)
+position = Vector2(699.787, 437)
 shape = SubResource("RectangleShape2D_oy4py")
 one_way_collision_margin = 0.0
 debug_color = Color(0.305882, 0.588235, 0.611765, 0.419608)
@@ -180,18 +56,6 @@ offset_bottom = 101.0
 texture = ExtResource("3_02p35")
 
 [node name="Sun1" parent="." instance=ExtResource("5_ofomy")]
-position = Vector2(-76, -300)
+position = Vector2(-111, -310)
 
-[node name="pea" type="CharacterBody2D" parent="."]
-script = ExtResource("6_1rnbw")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="pea"]
-position = Vector2(292, 378)
-shape = SubResource("CapsuleShape2D_ll6jc")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="pea"]
-position = Vector2(294, 385)
-scale = Vector2(1.5, 1.5)
-sprite_frames = SubResource("SpriteFrames_y0crk")
-animation = &"Attack"
-frame_progress = 0.110574
+[node name="peashooter" parent="." instance=ExtResource("6_g07tq")]

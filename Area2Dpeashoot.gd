@@ -1,6 +1,6 @@
-extends CharacterBody2D
+extends Area2D
 var spawn_timer := Timer.new()
-
+var hp=10
 @onready var animation  = $AnimatedSprite2D
 
 func _ready():
@@ -13,6 +13,8 @@ func _ready():
 	fight()
 
 func fight():
+	if hp==0:
+		self.queue_free()
 	animation.play("Attack")
 	spawn_timer.start()
 
@@ -21,3 +23,9 @@ func spawn_projectile():
 	print("Projectile spawned at: ", projectile.global_position)
 	get_parent().add_child(projectile)
 	projectile.global_position = global_position + Vector2(40,-10)
+func _on_body_entered(body):
+	print(body.name)
+	if "eat" in body and "check_state" in body:
+		body.eat = 1
+		body.check_state()
+		hp-=1
